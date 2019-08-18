@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/GameState.gd" type="Script" id=1]
+
+[node name="GameState" type="Node"]
+script = ExtResource( 1 )
+
+[node name="ScoreTimer" type="Timer" parent="."]
+wait_time = 2.0
+[connection signal="timeout" from="ScoreTimer" to="." method="_on_ScoreTimer_timeout"]
